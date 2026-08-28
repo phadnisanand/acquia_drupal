@@ -10,5 +10,4 @@ eca.model.*.yml
 node_modules
 patches.lock.json
 /.phpunit.result.cache
-/vendor
 /web

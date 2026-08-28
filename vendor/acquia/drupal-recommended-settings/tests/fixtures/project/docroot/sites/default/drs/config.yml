@@ -1,6 +1,0 @@
-drupal.db.database: default
-drupal.db.username: root
-drupal.db.password: root
-drupal:
-  db:
-    host: 127.0.0.1
