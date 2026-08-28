@@ -34,6 +34,17 @@ jobs:
             --no-progress \
             --optimize-autoloader \
             --no-dev
+      - name: Fix executable permissions
+        run: |
+          chmod +x vendor/bin/drush
+
+      - name: Verify Composer and Drush
+        run: |
+          test -f vendor/autoload.php
+          test -f vendor/autoload_runtime.php
+          test -f vendor/bin/drush
+          vendor/bin/drush --version
+          
       # 4. Configure SSH
       - name: Configure SSH
         run: |
