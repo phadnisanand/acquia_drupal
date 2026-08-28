@@ -1,6 +1,0 @@
-name: Static assets example
-machineName: static-assets-example
-status: true
-props:
-  properties: {}
-slots: {}

@@ -1,3 +1,0 @@
-administer scheduler_test_no_bundle content:
-  title: 'Administer Scheduler test no-bundle entities'
-  restrict access: true

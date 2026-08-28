@@ -1,3 +1,0 @@
-modeler_api:
-  class: \Drupal\Core\Menu\LocalTaskDefault
-  deriver: \Drupal\modeler_api\Plugin\Derivative\ModelerApiLocalTask

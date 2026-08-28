@@ -1,2 +1,0 @@
-permission_callbacks:
-  - \Drupal\media_library_bulk_upload\MediaLibraryBulkUploadPermissions::getPermissions

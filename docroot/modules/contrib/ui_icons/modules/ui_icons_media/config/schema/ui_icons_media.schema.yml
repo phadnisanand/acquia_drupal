@@ -1,3 +1,0 @@
-media.source.ui_icon:
-  type: media.source.field_aware
-  label: 'Icon media source configuration'

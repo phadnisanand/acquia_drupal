@@ -1,5 +1,0 @@
-
-services:
-  Drupal\paragraphs_type_permissions\Hook\ParagraphsTypePermissionsHooks:
-    class: Drupal\paragraphs_type_permissions\Hook\ParagraphsTypePermissionsHooks
-    autowire: true

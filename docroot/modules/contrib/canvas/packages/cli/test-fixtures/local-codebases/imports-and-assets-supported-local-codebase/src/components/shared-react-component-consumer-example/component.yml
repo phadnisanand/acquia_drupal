@@ -1,6 +1,0 @@
-name: Shared React component consumer example
-machineName: shared-react-component-consumer-example
-status: true
-props:
-  properties: {}
-slots: {}

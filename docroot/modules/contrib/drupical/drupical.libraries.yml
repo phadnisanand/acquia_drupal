@@ -1,7 +1,0 @@
-drupical:
-  version: 1.x
-  css:
-    theme:
-      css/drupical.css: {}
-  dependencies:
-    - core/drupal.ajax

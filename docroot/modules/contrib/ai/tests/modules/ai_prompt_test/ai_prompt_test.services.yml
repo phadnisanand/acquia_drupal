@@ -1,5 +1,0 @@
-services:
-  ai_prompt_test.route_subscriber:
-    class: Drupal\ai_prompt_test\Routing\RouteSubscriber
-    tags:
-      - { name: event_subscriber }

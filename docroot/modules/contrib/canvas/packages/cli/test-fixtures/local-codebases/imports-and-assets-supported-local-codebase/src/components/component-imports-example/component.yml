@@ -1,6 +1,0 @@
-name: Component imports example
-machineName: component-imports-example
-status: true
-props:
-  properties: {}
-slots: {}

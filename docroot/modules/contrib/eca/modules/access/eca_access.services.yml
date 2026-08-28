@@ -1,2 +1,0 @@
-parameters:
-  eca_access.skip_procedural_hook_scan: true

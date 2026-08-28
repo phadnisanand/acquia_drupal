@@ -1,5 +1,0 @@
-
-services:
-  Drupal\paragraphs_test\Hook\ParagraphsTestHooks:
-    class: Drupal\paragraphs_test\Hook\ParagraphsTestHooks
-    autowire: true

@@ -1,5 +1,0 @@
-/.phpstan-env/
-/phpstan-quality-report.json
-/junit.xml
-# Zensical build output
-/site/

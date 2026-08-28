@@ -1,6 +1,0 @@
-name: Shared default export example
-machineName: shared-default-export-example
-status: true
-props:
-  properties: {}
-slots: {}

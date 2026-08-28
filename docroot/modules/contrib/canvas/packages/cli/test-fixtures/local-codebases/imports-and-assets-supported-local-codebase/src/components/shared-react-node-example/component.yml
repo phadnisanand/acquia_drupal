@@ -1,6 +1,0 @@
-name: Shared ReactNode example
-machineName: shared-react-node-example
-status: true
-props:
-  properties: {}
-slots: {}
