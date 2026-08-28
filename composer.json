@@ -36,6 +36,7 @@
         "drupal/ai_seo": "^1.1.2",
         "drupal/automatic_updates": "^4.1",
         "drupal/autosave_form": "^1.11.0",
+        "drupal/backup_migrate": "5.1",
         "drupal/better_exposed_filters": "^7.1.2",
         "drupal/bootstrap_barrio": "^5.5.20",
         "drupal/bpmn_io": "^3.0.6",

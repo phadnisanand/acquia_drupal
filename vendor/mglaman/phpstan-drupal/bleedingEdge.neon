@@ -1,0 +1,6 @@
+parameters:
+	drupal:
+		bleedingEdge:
+			checkDeprecatedHooksInApiFiles: false
+			checkCoreDeprecatedHooksInApiFiles: true
+			checkContribDeprecatedHooksInApiFiles: true
