@@ -33,7 +33,7 @@ jobs:
             --prefer-dist \
             --no-progress \
             --optimize-autoloader
-
+            --no-dev
       # 4. Configure SSH
       - name: Configure SSH
         run: |
