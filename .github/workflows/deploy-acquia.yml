@@ -1,0 +1,69 @@
+name: Deploy Drupal to Acquia
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # 1. Checkout GitHub repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. Setup PHP
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, xml, ctype, iconv, intl, pdo, pdo_mysql
+          tools: composer
+
+      # 3. Install Composer dependencies
+      - name: Install Composer dependencies
+        run: |
+          composer install \
+            --no-interaction \
+            --prefer-dist \
+            --no-progress \
+            --optimize-autoloader
+
+      # 4. Configure SSH
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+
+          echo "${{ secrets.ACQUIA_SSH_PRIVATE_KEY }}" \
+            > ~/.ssh/id_rsa
+
+          chmod 600 ~/.ssh/id_rsa
+
+          ssh-keyscan -H svn-45062.prod.hosting.acquia.com \
+            >> ~/.ssh/known_hosts
+
+      # 5. Configure Git
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions@github.com"
+
+      # 6. Add Acquia remote
+      - name: Add Acquia remote
+        run: |
+          git remote add acquia \
+            pp46887d17@svn-45062.prod.hosting.acquia.com:pp46887d17.git
+
+      - name: Fetch Acquia dist
+        run: |
+          git fetch acquia dist
+
+      # 7. Push to Acquia
+      - name: Deploy to Acquia
+        run: |
+          git push --force acquia HEAD:dist
