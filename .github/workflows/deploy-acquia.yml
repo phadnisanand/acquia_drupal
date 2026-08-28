@@ -37,6 +37,7 @@ jobs:
       - name: Fix executable permissions
         run: |
           chmod +x vendor/bin/drush
+          chmod +x vendor/drush/drush/drush
 
       - name: Verify Composer and Drush
         run: |
