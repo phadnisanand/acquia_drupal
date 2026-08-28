@@ -3,7 +3,7 @@ name: Deploy Drupal to Acquia
 on:
   push:
     branches:
-      - master
+      - dist
 
 jobs:
   deploy:
