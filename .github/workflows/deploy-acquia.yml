@@ -36,6 +36,7 @@ jobs:
             --no-dev
       - name: Fix executable permissions
         run: |
+          chmod +x vendor/bin/*
           chmod +x vendor/bin/drush
           chmod +x vendor/drush/drush/drush
 
